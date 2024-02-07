@@ -54,9 +54,10 @@ public class Main {
                 break;
             case 9, 10, 11:
                 System.out.println("Этот месяц принадлежит к сезону осень");
+                break;
             default:
                 System.out.println("Номер месяца введен неправильно.");
-
+                break;
         }
     }
 }
