@@ -12,7 +12,7 @@ public class Main {
         int yearPhon = 2013;
         if (clientOS == 0 && yearPhon < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientOS == 0 && yearPhon > 2015) {
+        } else if (clientOS == 0 && yearPhon >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 1 && yearPhon < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
@@ -22,7 +22,7 @@ public class Main {
 
         /// Задание №3.
         int year = 1434;
-        if ((year % 4 == 0 && year % 100 != 0 && year >= 1584)||(year % 400 == 0 && year >= 1584)) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0 && year >= 1584) {
             System.out.println("Год високосный");
         } else {
             System.out.println("Год невисокосный");
@@ -54,6 +54,9 @@ public class Main {
                 break;
             case 9, 10, 11:
                 System.out.println("Этот месяц принадлежит к сезону осень");
+            default:
+                System.out.println("Номер месяца введен неправильно.");
+
         }
     }
 }
